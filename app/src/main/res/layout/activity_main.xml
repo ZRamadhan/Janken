@@ -84,11 +84,11 @@
             app:layout_constraintTop_toBottomOf="@+id/pemainDua" />
 
         <TextView
-            android:id="@+id/testVersus"
+            android:id="@+id/textVersus"
+            style="@style/TextMiddle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VS"
-            android:textSize="38sp"
             app:layout_constraintBottom_toBottomOf="@+id/pemainDua"
             app:layout_constraintEnd_toStartOf="@+id/comDua"
             app:layout_constraintStart_toEndOf="@+id/pemainDua"
@@ -114,6 +114,14 @@
             android:src="@drawable/batu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/comDua" />
+
+        <ImageView
+            android:id="@+id/btnReset"
+            style="@style/IconSizeComputer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/refresh"
+            android:layout_marginBottom="25dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
