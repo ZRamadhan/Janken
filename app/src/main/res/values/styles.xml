@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextHeaderBatu" parent="Theme.NewApplication">
+        <item name="android:textColor">#FF9800</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextHeaderKertas" parent="Theme.NewApplication">
+        <item name="android:textColor">#8BC34A</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextHeaderGunting" parent="Theme.NewApplication">
+        <item name="android:textColor">#9C27B0</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="IconSizePemain" parent="Theme.NewApplication">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="IconSizeComputer" parent="Theme.NewApplication">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="TextPlayer" parent="Theme.NewApplication">
+        <item name="android:textColor">#2196F3</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/prompt_regular</item>
+    </style>
+
+    <style name="TextMiddle" parent="Theme.NewApplication">
+        <item name="fontFamily">@font/prompt_regular</item>
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:textSize">52sp</item>
+        <item name="android:rotation">-30</item>
+    </style>
+</resources>
