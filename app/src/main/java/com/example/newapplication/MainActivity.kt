@@ -1,6 +1,8 @@
 package com.example.newapplication
 
+import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -24,11 +26,17 @@ class MainActivity : AppCompatActivity() {
     val btnReset = findViewById<ImageView>(R.id.btnReset)
     val txtMiddle = findViewById<TextView>(R.id.textVersus)
 
-    btnPemainGunting.setOnClickListener{
+//  Logika pemrograman akan berjalan ketika salah satu gambar pemain ditekan
+    btnPemainGunting.setOnClickListener {
       btnPemainGunting.setBackgroundColor(Color.rgb(103, 224, 213))
       val computer_move = (1..3).random()
       printLog("Pemain Gunting")
-      if (computer_move == 1){
+
+//    membuat button tidak dapat ditekan kembali sebelum mereset
+      btnPemainGunting.isClickable = false
+      btnPemainBatu.isClickable = false
+      btnPemainKertas.isClickable = false
+      if (computer_move == 1) {
         printLog("Computer Kertas")
         btnComKertas.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Pemain\nMENANG"
@@ -36,14 +44,14 @@ class MainActivity : AppCompatActivity() {
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(50, 224, 70))
-      } else if (computer_move == 2){
+      } else if (computer_move == 2) {
         printLog("Computer Gunting")
         btnComGunting.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "DRAW !"
         printLog("Hasil Draw !")
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(17, 20, 194))
-      } else if (computer_move == 3){
+      } else if (computer_move == 3) {
         printLog("Computer Batu")
         btnComBatu.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Computer\nMENANG"
@@ -54,11 +62,17 @@ class MainActivity : AppCompatActivity() {
       }
     }
 
-    btnPemainBatu.setOnClickListener{
+//  Logika pemrograman akan berjalan ketika salah satu gambar pemain ditekan
+    btnPemainBatu.setOnClickListener {
       btnPemainBatu.setBackgroundColor(Color.rgb(103, 224, 213))
       val computer_move = (1..3).random()
       printLog("Pemain Batu")
-      if (computer_move == 1){
+
+//    membuat button tidak dapat ditekan kembali sebelum mereset
+      btnPemainGunting.isClickable = false
+      btnPemainBatu.isClickable = false
+      btnPemainKertas.isClickable = false
+      if (computer_move == 1) {
         printLog("Computer Kertas")
         btnComKertas.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Computer\nMENANG"
@@ -66,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(50, 224, 70))
-      } else if (computer_move == 2){
+      } else if (computer_move == 2) {
         printLog("Computer Gunting")
         btnComGunting.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Pemain\nMENANG"
@@ -74,7 +88,7 @@ class MainActivity : AppCompatActivity() {
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(17, 20, 194))
-      } else if (computer_move == 3){
+      } else if (computer_move == 3) {
         printLog("Computer Batu")
         btnComBatu.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "DRAW !"
@@ -84,18 +98,24 @@ class MainActivity : AppCompatActivity() {
       }
     }
 
-    btnPemainKertas.setOnClickListener{
+//  Logika pemrograman akan berjalan ketika salah satu gambar pemain ditekan
+    btnPemainKertas.setOnClickListener {
       btnPemainKertas.setBackgroundColor(Color.rgb(103, 224, 213))
       val computer_move = (1..3).random()
       printLog("Pemain Kertas")
-      if (computer_move == 1){
+
+//    membuat button tidak dapat ditekan kembali sebelum mereset
+      btnPemainGunting.isClickable = false
+      btnPemainBatu.isClickable = false
+      btnPemainKertas.isClickable = false
+      if (computer_move == 1) {
         printLog("Computer Kertas")
         btnComKertas.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "DRAW !"
         Log.d(MainActivity::class.java.simpleName, "Hasil Draw !")
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(50, 224, 70))
-      } else if (computer_move == 2){
+      } else if (computer_move == 2) {
         Log.d(MainActivity::class.java.simpleName, "Computer Gunting")
         btnComGunting.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Computer\nMENANG"
@@ -103,7 +123,7 @@ class MainActivity : AppCompatActivity() {
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(17, 20, 194))
-      } else if (computer_move == 3){
+      } else if (computer_move == 3) {
         Log.d(MainActivity::class.java.simpleName, "Computer Batu")
         btnComBatu.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Pemain\nMENANG"
@@ -114,7 +134,7 @@ class MainActivity : AppCompatActivity() {
       }
     }
 
-    btnReset.setOnClickListener{
+    btnReset.setOnClickListener {
       btnPemainGunting.setBackgroundResource(0)
       btnPemainKertas.setBackgroundResource(0)
       btnPemainBatu.setBackgroundResource(0)
@@ -124,10 +144,15 @@ class MainActivity : AppCompatActivity() {
 
       txtMiddle.text = "VS"
       txtMiddle.setBackgroundResource(0)
+
+//    mengembalikan fungsi tombol agar dapat ditekan kembali
+      btnPemainGunting.isClickable = true
+      btnPemainBatu.isClickable = true
+      btnPemainKertas.isClickable = true
     }
   }
 
-  private fun printLog(text: String){
+  private fun printLog(text: String) {
     Log.d(MainActivity::class.java.simpleName, text)
   }
 }
