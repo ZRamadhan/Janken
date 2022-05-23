@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
+    supportActionBar?.hide()
 
     val btnPemainGunting = findViewById<ImageView>(R.id.pemainSatu)
     val btnPemainBatu = findViewById<ImageView>(R.id.pemainDua)
