@@ -27,27 +27,27 @@ class MainActivity : AppCompatActivity() {
     btnPemainGunting.setOnClickListener{
       btnPemainGunting.setBackgroundColor(Color.rgb(103, 224, 213))
       val computer_move = (1..3).random()
-      Log.d(MainActivity::class.java.simpleName, "Pemain Gunting")
+      printLog("Pemain Gunting")
       if (computer_move == 1){
-        Log.d(MainActivity::class.java.simpleName, "Computer Kertas")
+        printLog("Computer Kertas")
         btnComKertas.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Pemain\nMENANG"
-        Log.d(MainActivity::class.java.simpleName, "Hasil Pemain Menang !")
+        printLog("Hasil Pemain Menang !")
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(50, 224, 70))
       } else if (computer_move == 2){
-        Log.d(MainActivity::class.java.simpleName, "Computer Gunting")
+        printLog("Computer Gunting")
         btnComGunting.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "DRAW !"
-        Log.d(MainActivity::class.java.simpleName, "Hasil Draw !")
+        printLog("Hasil Draw !")
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(17, 20, 194))
       } else if (computer_move == 3){
-        Log.d(MainActivity::class.java.simpleName, "Computer Batu")
+        printLog("Computer Batu")
         btnComBatu.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Computer\nMENANG"
-        Log.d(MainActivity::class.java.simpleName, "Hasil Computer Menang !")
+        printLog("Hasil Computer Menang !")
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(50, 224, 70))
@@ -57,25 +57,25 @@ class MainActivity : AppCompatActivity() {
     btnPemainBatu.setOnClickListener{
       btnPemainBatu.setBackgroundColor(Color.rgb(103, 224, 213))
       val computer_move = (1..3).random()
-      Log.d(MainActivity::class.java.simpleName, "Pemain Batu")
+      printLog("Pemain Batu")
       if (computer_move == 1){
-        Log.d(MainActivity::class.java.simpleName, "Computer Kertas")
+        printLog("Computer Kertas")
         btnComKertas.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Computer\nMENANG"
-        Log.d(MainActivity::class.java.simpleName, "Hasil Computer Menang !")
+        printLog("Hasil Computer Menang !")
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(50, 224, 70))
       } else if (computer_move == 2){
-        Log.d(MainActivity::class.java.simpleName, "Computer Gunting")
+        printLog("Computer Gunting")
         btnComGunting.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Pemain\nMENANG"
-        Log.d(MainActivity::class.java.simpleName, "Hasil Pemain Menang !")
+        printLog("Hasil Pemain Menang !")
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(17, 20, 194))
       } else if (computer_move == 3){
-        Log.d(MainActivity::class.java.simpleName, "Computer Batu")
+        printLog("Computer Batu")
         btnComBatu.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "DRAW !"
         Log.d(MainActivity::class.java.simpleName, "Hasil Draw !")
@@ -87,9 +87,9 @@ class MainActivity : AppCompatActivity() {
     btnPemainKertas.setOnClickListener{
       btnPemainKertas.setBackgroundColor(Color.rgb(103, 224, 213))
       val computer_move = (1..3).random()
-      Log.d(MainActivity::class.java.simpleName, "Pemain Kertas")
+      printLog("Pemain Kertas")
       if (computer_move == 1){
-        Log.d(MainActivity::class.java.simpleName, "Computer Kertas")
+        printLog("Computer Kertas")
         btnComKertas.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "DRAW !"
         Log.d(MainActivity::class.java.simpleName, "Hasil Draw !")
@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
         Log.d(MainActivity::class.java.simpleName, "Computer Gunting")
         btnComGunting.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Computer\nMENANG"
-        Log.d(MainActivity::class.java.simpleName, "Hasil Computer Menang !")
+        printLog("Hasil Computer Menang !")
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(17, 20, 194))
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
         Log.d(MainActivity::class.java.simpleName, "Computer Batu")
         btnComBatu.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Pemain\nMENANG"
-        Log.d(MainActivity::class.java.simpleName, "Hasil Pemain Menang !")
+        printLog("Hasil Pemain Menang !")
         txtMiddle.setTextSize(32F)
         txtMiddle.setTextColor(Color.rgb(255, 225, 255))
         txtMiddle.setBackgroundColor(Color.rgb(50, 224, 70))
@@ -125,5 +125,9 @@ class MainActivity : AppCompatActivity() {
       txtMiddle.text = "VS"
       txtMiddle.setBackgroundResource(0)
     }
+  }
+
+  private fun printLog(text: String){
+    Log.d(MainActivity::class.java.simpleName, text)
   }
 }
