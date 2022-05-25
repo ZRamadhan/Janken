@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
-    supportActionBar?.hide()
+    supportActionBar?.hide() // +1 untuk ini, ngilangin actionbar agar terlihat lebih clean dan ngikutin GDD
 
     val btnPemainGunting = findViewById<ImageView>(R.id.pemainSatu)
     val btnPemainBatu = findViewById<ImageView>(R.id.pemainDua)
@@ -29,14 +29,14 @@ class MainActivity : AppCompatActivity() {
 //  Logika pemrograman akan berjalan ketika salah satu gambar pemain ditekan
     btnPemainGunting.setOnClickListener {
       btnPemainGunting.setBackgroundColor(Color.rgb(103, 224, 213))
-      val computer_move = (1..3).random()
+      val computer_move = (1..3).random() // kalau bisa penamaan variable camel case, jangan snake case
       printLog("Pemain Gunting")
 
 //    membuat button tidak dapat ditekan kembali sebelum mereset
       btnPemainGunting.isClickable = false
       btnPemainBatu.isClickable = false
       btnPemainKertas.isClickable = false
-      if (computer_move == 1) {
+      if (computer_move == 1) { // ini bisa di ganti jadi when mas
         printLog("Computer Kertas")
         btnComKertas.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Pemain\nMENANG"
@@ -71,8 +71,8 @@ class MainActivity : AppCompatActivity() {
 //    membuat button tidak dapat ditekan kembali sebelum mereset
       btnPemainGunting.isClickable = false
       btnPemainBatu.isClickable = false
-      btnPemainKertas.isClickable = false
-      if (computer_move == 1) {
+      btnPemainKertas.isClickable = false // +1 untuk error handling, di disable biar ga bisa di click, nice one
+      if (computer_move == 1) { // bisa di ganti jadi when
         printLog("Computer Kertas")
         btnComKertas.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "Computer\nMENANG"
@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
       btnPemainGunting.isClickable = false
       btnPemainBatu.isClickable = false
       btnPemainKertas.isClickable = false
-      if (computer_move == 1) {
+      if (computer_move == 1) { // codingan di sini banyak yang berulang dan copy paste, mungkin lebih baik kalau di pindah ke method/function
         printLog("Computer Kertas")
         btnComKertas.setBackgroundColor(Color.rgb(103, 224, 213))
         txtMiddle.text = "DRAW !"
